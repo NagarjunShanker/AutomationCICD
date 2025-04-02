@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite parallel="none" name="Failed suite [Default suite]">
-  <test parallel="none" name="Default test(failed)">
+<suite parallel="tests" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="testComponent.Listeners"/>
+  </listeners>
+  <test parallel="tests" name="Error Verification Tests(failed)">
     <classes>
       <class name="nagarjunPractice.tests.ErrorVerification">
         <methods>
@@ -10,6 +13,12 @@
           <include name="loginError"/>
         </methods>
       </class> <!-- nagarjunPractice.tests.ErrorVerification -->
+      <class name="nagarjunPractice.tests.ProdCheckout">
+        <methods>
+          <include name="tearDown"/>
+          <include name="launchApplication"/>
+        </methods>
+      </class> <!-- nagarjunPractice.tests.ProdCheckout -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Error Verification Tests(failed) -->
+</suite> <!-- Failed suite [Suite] -->

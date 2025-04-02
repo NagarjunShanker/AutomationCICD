@@ -1,20 +1,121 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results total="3" passed="3" failed="0" skipped="0">
+<testng-results total="5" passed="3" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-27T09:07:17Z" name="Default suite" finished-at="2025-03-27T09:08:07Z" duration-ms="50673">
+  <suite started-at="2025-04-01T10:43:10Z" name="Suite" finished-at="2025-04-01T10:44:29Z" duration-ms="78550">
     <groups>
+      <group name="ErrorValidation">
+        <method signature="ErrorVerification.loginError()[pri:0, instance:nagarjunPractice.tests.ErrorVerification@339bf286]" name="loginError" class="nagarjunPractice.tests.ErrorVerification"/>
+      </group> <!-- ErrorValidation -->
       <group name="checkout">
-        <method signature="ProdCheckout.checkoutProd(java.util.HashMap)[pri:0, instance:nagarjunPractice.tests.ProdCheckout@6cce16f4]" name="checkoutProd" class="nagarjunPractice.tests.ProdCheckout"/>
+        <method signature="ProdCheckout.checkoutProd(java.util.HashMap)[pri:0, instance:nagarjunPractice.tests.ProdCheckout@5b057c8c]" name="checkoutProd" class="nagarjunPractice.tests.ProdCheckout"/>
       </group> <!-- checkout -->
     </groups>
-    <test started-at="2025-03-27T09:07:17Z" name="Default test" finished-at="2025-03-27T09:08:07Z" duration-ms="50673">
-      <class name="nagarjunPractice.tests.ProdCheckout">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:nagarjunPractice.tests.ProdCheckout@6cce16f4]" started-at="2025-03-27T14:37:17Z" name="launchApplication" finished-at="2025-03-27T14:37:21Z" duration-ms="3907" status="PASS">
+    <test started-at="2025-04-01T10:43:10Z" name="Error Verification Tests" finished-at="2025-04-01T10:43:20Z" duration-ms="9753">
+      <class name="nagarjunPractice.tests.ErrorVerification">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:nagarjunPractice.tests.ErrorVerification@339bf286]" started-at="2025-04-01T16:13:10Z" name="launchApplication" finished-at="2025-04-01T16:13:15Z" duration-ms="4829" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="checkoutProd(java.util.HashMap)[pri:0, instance:nagarjunPractice.tests.ProdCheckout@6cce16f4]" started-at="2025-03-27T14:37:21Z" name="checkoutProd" data-provider="getDataByJson" finished-at="2025-03-27T14:37:43Z" duration-ms="21805" status="PASS">
+        <test-method signature="loginError()[pri:0, instance:nagarjunPractice.tests.ErrorVerification@339bf286]" started-at="2025-04-01T16:13:15Z" name="loginError" finished-at="2025-04-01T16:13:15Z" duration-ms="576" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Incorrect email  password.] but found [Incorrect email or password.]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Incorrect email  password.] but found [Incorrect email or password.]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:176)
+	at org.testng.Assert.assertEquals(Assert.java:186)
+	at nagarjunPractice.tests.ErrorVerification.loginError(ErrorVerification.java:21)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:38)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:382)
+	at org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginError -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:nagarjunPractice.tests.ErrorVerification@339bf286]" started-at="2025-04-01T16:13:16Z" name="tearDown" finished-at="2025-04-01T16:13:16Z" duration-ms="176" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:nagarjunPractice.tests.ErrorVerification@339bf286]" started-at="2025-04-01T16:13:16Z" name="launchApplication" finished-at="2025-04-01T16:13:19Z" duration-ms="2662" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="loginError()[pri:0, instance:nagarjunPractice.tests.ErrorVerification@339bf286]" started-at="2025-04-01T16:13:19Z" name="loginError" finished-at="2025-04-01T16:13:19Z" duration-ms="683" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Incorrect email  password.] but found [Incorrect email or password.]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Incorrect email  password.] but found [Incorrect email or password.]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:176)
+	at org.testng.Assert.assertEquals(Assert.java:186)
+	at nagarjunPractice.tests.ErrorVerification.loginError(ErrorVerification.java:21)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.retryFailed(Invoker.java:1049)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1254)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:38)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:382)
+	at org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginError -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:nagarjunPractice.tests.ErrorVerification@339bf286]" started-at="2025-04-01T16:13:20Z" name="tearDown" finished-at="2025-04-01T16:13:20Z" duration-ms="196" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- nagarjunPractice.tests.ErrorVerification -->
+    </test> <!-- Error Verification Tests -->
+    <test started-at="2025-04-01T10:43:10Z" name="CheckOut Submit Tests" finished-at="2025-04-01T10:44:29Z" duration-ms="78550">
+      <class name="nagarjunPractice.tests.ProdCheckout">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:nagarjunPractice.tests.ProdCheckout@5b057c8c]" started-at="2025-04-01T16:13:10Z" name="launchApplication" finished-at="2025-04-01T16:13:15Z" duration-ms="4506" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="checkoutProd(java.util.HashMap)[pri:0, instance:nagarjunPractice.tests.ProdCheckout@5b057c8c]" started-at="2025-04-01T16:13:15Z" name="checkoutProd" data-provider="getDataByJson" finished-at="2025-04-01T16:13:37Z" duration-ms="21800" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -25,15 +126,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkoutProd -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:nagarjunPractice.tests.ProdCheckout@6cce16f4]" started-at="2025-03-27T14:37:43Z" name="tearDown" finished-at="2025-03-27T14:37:43Z" duration-ms="237" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:nagarjunPractice.tests.ProdCheckout@5b057c8c]" started-at="2025-04-01T16:13:37Z" name="tearDown" finished-at="2025-04-01T16:13:37Z" duration-ms="252" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:nagarjunPractice.tests.ProdCheckout@6cce16f4]" started-at="2025-03-27T14:37:43Z" name="launchApplication" finished-at="2025-03-27T14:37:46Z" duration-ms="2712" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:nagarjunPractice.tests.ProdCheckout@5b057c8c]" started-at="2025-04-01T16:13:37Z" name="launchApplication" finished-at="2025-04-01T16:14:00Z" duration-ms="23263" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="checkoutProd(java.util.HashMap)[pri:0, instance:nagarjunPractice.tests.ProdCheckout@6cce16f4]" started-at="2025-03-27T14:37:46Z" name="checkoutProd" data-provider="getDataByJson" finished-at="2025-03-27T14:38:01Z" duration-ms="15295" status="PASS">
+        <test-method signature="checkoutProd(java.util.HashMap)[pri:0, instance:nagarjunPractice.tests.ProdCheckout@5b057c8c]" started-at="2025-04-01T16:14:00Z" name="checkoutProd" data-provider="getDataByJson" finished-at="2025-04-01T16:14:22Z" duration-ms="21818" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -44,23 +145,23 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkoutProd -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:nagarjunPractice.tests.ProdCheckout@6cce16f4]" started-at="2025-03-27T14:38:01Z" name="tearDown" finished-at="2025-03-27T14:38:01Z" duration-ms="223" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:nagarjunPractice.tests.ProdCheckout@5b057c8c]" started-at="2025-04-01T16:14:22Z" name="tearDown" finished-at="2025-04-01T16:14:22Z" duration-ms="257" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:nagarjunPractice.tests.ProdCheckout@6cce16f4]" started-at="2025-03-27T14:38:01Z" name="launchApplication" finished-at="2025-03-27T14:38:04Z" duration-ms="2545" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:nagarjunPractice.tests.ProdCheckout@5b057c8c]" started-at="2025-04-01T16:14:22Z" name="launchApplication" finished-at="2025-04-01T16:14:25Z" duration-ms="2727" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="OrderHistoryTest()[pri:0, instance:nagarjunPractice.tests.ProdCheckout@6cce16f4]" started-at="2025-03-27T14:38:04Z" name="OrderHistoryTest" finished-at="2025-03-27T14:38:07Z" depends-on-methods="nagarjunPractice.tests.ProdCheckout.checkoutProd" duration-ms="3425" status="PASS">
+        <test-method signature="OrderHistoryTest()[pri:0, instance:nagarjunPractice.tests.ProdCheckout@5b057c8c]" started-at="2025-04-01T16:14:25Z" name="OrderHistoryTest" finished-at="2025-04-01T16:14:28Z" depends-on-methods="nagarjunPractice.tests.ProdCheckout.checkoutProd" duration-ms="3439" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OrderHistoryTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:nagarjunPractice.tests.ProdCheckout@6cce16f4]" started-at="2025-03-27T14:38:07Z" name="tearDown" finished-at="2025-03-27T14:38:07Z" duration-ms="218" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:nagarjunPractice.tests.ProdCheckout@5b057c8c]" started-at="2025-04-01T16:14:28Z" name="tearDown" finished-at="2025-04-01T16:14:29Z" duration-ms="182" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- nagarjunPractice.tests.ProdCheckout -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- CheckOut Submit Tests -->
+  </suite> <!-- Suite -->
 </testng-results>

@@ -29,12 +29,12 @@ public class BaseTest {
 	public WebDriver driver;
 	public LoadingPage login;
 
-	// This meethod will initialize the browser
+	// This method will initialize the browser
 	public WebDriver initializeBrowser() throws IOException {
 
 		// Fetch the browser type from the global variable
 		Properties pro = new Properties();
-		// To convert tehe file into input stream
+		// To convert the file into input stream
 		FileInputStream fis = new FileInputStream(
 				System.getProperty("user.dir") + "\\src\\main\\java\\resources\\GlobalData.properties");
 
